@@ -4,12 +4,24 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import '@/assets/style/index.less';
+
+import elementui from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(elementui)
+
+import '@/icons' // icon
+import 'reset-css';
+
+import store from './store'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
